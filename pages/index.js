@@ -4,10 +4,17 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css' 
 import {AiFillTwitterCircle, AiFillLinkedin, AiFillGithub} from "react-icons/ai"
 import chibi from '../public/chibi-me.png'
+import cinna from '../public/cinna thumb.PNG'
+import pixel from '../public/pixel cart new.png'
+import RPG from '../public/RPG.JPG'
+import run from '../public/run buddy.JPG'
+import weather from '../public/Weather Advice.png'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <>
       <Head>
@@ -16,7 +23,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-white px-10'>
+      <main className='bg-white px-10 md:px-20 lg:px-40'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
             <h1 className='text-xl'>EM Coding</h1>
@@ -27,9 +34,9 @@ export default function Home() {
           </nav>
 
           <div className='text-center p-10'>
-            <h2 className='text-5xl py-2 text-black font-medium'>Sheridan Melton</h2>
-            <h3 className='text-2xl py-2'>Full Stack Web Developer</h3>
-            <p className='text-md py-5 leading-8 text-gray-800'>Hello! Welcome to my page my name is Sheridan and I am a freelance Web Developer that can provide you with services to get
+            <h2 className='text-5xl py-2 text-black font-medium md:text-6xl'>Sheridan Melton</h2>
+            <h3 className='text-2xl py-2 md:text-3xl'>Full Stack Web Developer</h3>
+            <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto'>Hello! Welcome to my page my name is Sheridan and I am a freelance Web Developer that can provide you with services to get
               your site or project up and running! If you want to contact me about a project or service you find a link down below.
             </p>
           </div>
@@ -47,13 +54,65 @@ export default function Home() {
             <AiFillTwitterCircle />
             </a>
           </div>
-          <div className='relative mx-auto bg-gradient-to-b from-gray-700 rounded-full w-80 h-80 mt-20 overflow-hidden'>
-            <Image src={chibi} layout='fill' objectFit='cover'/>
+          <div className='relative mx-auto bg-gradient-to-b from-gray-700 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
+            <Image src={chibi} alt='chibi me'/>
           </div>
         </section>
 
         {/* Next section */}
-        <section></section>
+        <section>
+          <div>
+            <h3 className='text-3xl py-1 text-center'>About me</h3>
+            <p className='text-md py-2 leading-8 text-gray-800 text-center'>I began my coding journey with a coding bootcamp that was offered through Butler University. Thanks to that course I learned many skills such as HTML, CSS, Javascript, SQL, Node, React and much more! I graduated my bootcamp back in August of 2022 and since then used my knowledge to continue to create and develop.</p>
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <h3 className='text-3xl py-1 text-center'>Portfolio</h3>
+            <p className='text-md py-2 leading-8 text-gray-800 text-center'>Here are some projects that I made to showcase some of my skills.
+            </p>
+          </div>
+          <div>
+            <div className='lg:flex gap-10'>
+              <a className='shadow-lg p-10 rounded text-center'
+              href='https://cinna-sweets-new.vercel.app/'
+              target='_blank'
+              rel='noreferrer'>
+                <Image src={cinna} width={500} height={500} alt='cinna-thumb' />
+                <h3 className='text-lg font-medium pt-8 pb-2'>Cinna Sweets</h3>
+              </a>
+              <a className='shadow-lg p-10 rounded text-center'
+              href='https://pixel-cart-experimental.vercel.app/'
+              target='_blank'
+              rel='noreferrer'>
+                <Image src={pixel}  width={500} height={500} alt='pixel-cart' />
+                <h3 className='text-lg font-medium pt-8 pb-2'>Pixel Cart</h3>
+              </a>
+              <a className='shadow-lg p-10 rounded text-center'
+              href='https://xxelijahmxx.github.io/Random-PW-Generator/'
+              target='_blank'
+              rel='noreferrer'>
+                <Image src={RPG}  width={500} height={500} alt='password-gen' />
+                <h3 className='text-lg font-medium pt-8 pb-2'>Random Password Generator</h3>
+              </a>
+              <a className='shadow-lg p-10 rounded text-center'
+              href='https://xxelijahmxx.github.io/run-buddy/'
+              target='_blank'
+              rel='noreferrer'>
+                <Image src={run}  width={500} height={500} alt='run-buddy' />
+                <h3 className='text-lg font-medium pt-8 pb-2'>Run Buddy</h3>
+              </a>
+              <a className='shadow-lg p-10 rounded text-center'
+              href='https://xxelijahmxx.github.io/Weather-Advice-Project/'
+              target='_blank'
+              rel='noreferrer'>
+                <Image src={weather} width={500} height={500} alt='weather-advice' />
+                <h3 className='text-lg font-medium pt-8 pb-2'>Weather Advice</h3>
+              </a>
+            </div>
+          </div>
+        </section>
         
       </main>
     </>
