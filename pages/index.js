@@ -7,7 +7,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import chibi from '../public/chibi-me.png'
 import cinna from '../public/cinna thumb.png'
 import pixel from '../public/pixel cart new.png'
-import RPG from '../public/RPG.JPG'
+import RPG from '../public/rpg.jpg'
 import run from '../public/run buddy.JPG'
 import weather from '../public/Weather Advice.png'
 import react from '../public/React-icon.svg.png'
