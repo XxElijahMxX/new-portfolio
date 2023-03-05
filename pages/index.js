@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 import {AiFillTwitterCircle, AiFillLinkedin, AiFillGithub} from "react-icons/ai"
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import chibi from '../public/chibi-me.png'
-import cinna from '../public/cinna thumb.PNG'
+import cinna from '../public/cinna thumb.png'
 import pixel from '../public/pixel cart new.png'
 import RPG from '../public/RPG.JPG'
 import run from '../public/run buddy.JPG'
